@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd ./frontend && npm run build && cp -r build ..",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
-    "test": "echo no Test specified",
+    "test": "echo no Test specified yet ",
     "lint": "eslint ."
   },
   "author": "Alex1-ai",
