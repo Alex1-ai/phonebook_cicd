@@ -6,10 +6,14 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "start-prod": "cd ./frontend && npm start",
     "build:ui": "rm -rf build && cd ./frontend && npm run build && cp -r build ..",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "echo no Test specified yet ",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "cd ./frontend && npm run test:e2e",
+    "cypress:open": "cd ./frontend  && npm run cypress:open",
+    "start:test": "node index.js"
   },
   "author": "Alex1-ai",
   "license": "MIT",
@@ -21,7 +25,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "cypress": "^13.6.2",
     "eslint": "^8.56.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-react": "^7.33.2",
     "nodemon": "^3.0.1"
   },
   "repository": {

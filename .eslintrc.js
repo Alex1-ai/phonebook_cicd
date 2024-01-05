@@ -3,9 +3,13 @@ module.exports = {
     'browser': true,
     'commonjs': true,
     'es2021': true,
-    'node': true
+    'node': true,
+    'cypress/globals':true
 
   },
+  'plugins': [
+    'react','cypress'
+  ],
   'extends': 'eslint:recommended',
   'overrides': [
     {
